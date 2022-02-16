@@ -1,0 +1,5 @@
+sqrt(2) = 1,4142135623731
+Kvadratrod To i anden = 2
+e opløftet til pi 23,1406926327793
+Pi opløftet til e 22,459157718361
+Jamen dog, det virker
