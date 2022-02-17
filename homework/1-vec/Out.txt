@@ -1,0 +1,42 @@
+Testing vector class.
+Contructor with no argument returns zero vector
+z = 0 0 0
+
+Define two vectors with random integer coordinates between -100, 100
+u = 72 9 57
+v = 73 -76 61
+
+Vector addition and scalar multiplication:
+u+v = 145 -67 118
+z+v = 73 -76 61
+5*v = 365 -380 305
+u*5 = 360 45 285
+w = 8*u-v = 503 148 395
+
+Vector dot product:
+u • v = 8049
+
+Vector cross product:
+u × v = 4881 -231 -6129
+[also tests ToString override, as the cross product result is inserted in a formatted string.]
+
+[Test vector compare function]
+
+Test vector compare function. Comparing w to 8*u-v. Should return True True:
+True
+True
+
+Find single and double precision epsilon in current system:
+Double precision epsilon: 2,22044604925031E-16
+Single precision (float) epsilon: 1,192093E-07
+Crude epsilon: 1E-07
+
+Compare u to u plus the three epsilons added in one coordinate
+True
+False
+True
+
+Compare v to v scaled by (1+epsilons)
+False
+False
+False
