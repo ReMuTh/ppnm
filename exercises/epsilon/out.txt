@@ -1,0 +1,15 @@
+Max int by while loop bruteforce = 2147483647
+int.MaxValue = 2147483647
+
+Min int by while loop bruteforce = -2147483648
+int.MinValue = -2147483648
+
+Double precision epsilon = 2,22044604925031E-16
+System.Math.Pow(2,-52) = 2,22044604925031E-16
+
+Float epsilon = 1,192093E-07
+System.Math.Pow(2,-23) = 2,22044604925031E-16
+
+sumA -1 = 0
+sumB -1 = 5,960464E-06
+
