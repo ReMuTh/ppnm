@@ -1,0 +1,36 @@
+Testing various results from complex class
+
+Square root of minus one:
+cmath.sqrt(new complex(-1,0)) = 6,12e-17+1i
+cmath.I = 0+1i
+Compare using approx method: True
+
+Square root of i:
+cmath.sqrt(c.math.I) = 0,707+0,707i
+Manual constructed result with Re = Im = √0.5: 0,707+0,707i
+Compare using approx method: True
+
+exp(i):
+cmath.exp(cmath.I) = 0,54+0,841i
+Manually constructed result with Re=cos(1) and Im=sin(1): 0,54+0,841i
+Compare using approx method: True
+
+exp(iπ) (Euler's formula):
+cmath.exp(cmath.I * Math.PI) = -1+1,22e-16i
+Manually constructed result with Re=-1 and Im=0: -1+0i
+Compare using approx method: True
+
+i raised to i:
+cmath.pow(cmath.I,cmath.I) = 0,208+0i
+Manually constructed result with Re=exp(-π/2) and Im=0: 0,208+0i
+Compare using apmethodprox : True
+
+ln(i):
+cmath.log(cmath.I) = 0+1,57i
+Manually constructed result with Re=0 and Im=π/2: 0+1,57i
+Compare using approx method: True
+
+sin(iπ):
+cmath.sin(cmath.I*Math.PI) = 0+11,5i
+Manually constructed result with Re=0 and Im=sinh(π): 0+11,5i
+Compare using approx method: True
