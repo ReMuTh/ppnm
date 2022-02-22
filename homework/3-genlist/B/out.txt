@@ -1,0 +1,33 @@
+Creating genlist of integers
+
+Pushing 8 integers (multiples of 7) to the list:
+7 14 21 28 35 42 49 56 
+This genlist has 8 elements and capacity 8
+
+Pushing one more element -42 to the list should double the capacity:
+7 14 21 28 35 42 49 56 -42 
+This genlist has 9 elements and capacity 16
+
+Pushing one more element 113, no change in capacity:
+7 14 21 28 35 42 49 56 -42 113 
+This genlist has 10 elements and capacity 16
+
+Removing third element, no change in capacity:
+7 14 28 35 42 49 56 -42 113 
+This genlist has 9 elements and capacity 16
+
+Removing third element again, capacity is halfed:
+7 14 35 42 49 56 -42 113 
+This genlist has 8 elements and capacity 8
+
+Removing first element, no change in capacity:
+7 14 35 42 49 56 -42 113 
+This genlist has 8 elements and capacity 8
+
+Removing element -1 changes nothing
+7 14 35 42 49 56 -42 113 
+This genlist has 8 elements and capacity 8
+
+Removing element 10 (larger than size-1) changes nothing
+7 14 35 42 49 56 -42 113 
+This genlist has 8 elements and capacity 8

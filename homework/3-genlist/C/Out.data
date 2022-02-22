@@ -1,0 +1,11 @@
+Exercise "genlist" part C: chained-node generic list
+
+input: irregular table:
+-1.23     23.4 	   	 456.7
+  	     0.07   			      -7.4e8 	 6.72
+0.53 23.4 4.5
+
+output: regular table:
+-1,23e+02  2,34e+02  4,57e+03 
+ 7,00e+00 -7,40e+09  6,72e+02 
+ 5,30e+01  2,34e+02  4,50e+01 
