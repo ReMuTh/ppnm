@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\title{Approximating the exponential function}
+\author{René Munk Thalund}
+\date{March 2022}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine a \texttt{C\#} implementation of the exponential function that uses only multiplications and additions.
+\end{abstract}
+
+\section{Introduction}
+The exponential function $e^x$ is ubiquitous in math and science. It's defined as the unique function that is it's own derivative, and has value 1 for argument 0, that is:
+
+\begin{equation}
+    \frac{df}{dx} = f(x) \; \textrm{and} \;  f(0) = 1
+\end{equation}
+The definition extends to complex arguments. Notably with an entirely imaginary argument $e^{i\phi} Z$ rotates the complex number Z by $\phi$ radians in the complex plane.
+
+
+\section{Approximation}
+We're considering the following \texttt{C\#}-function.
+
+\begin{lstlisting}{language=[Sharp]C}
+static double ex(double x){
+    if(x<0)return 1/ex(-x);
+    if(x>1.0/8)return Pow(ex(x/2),2);
+    return 1+x*(1+x/2*(1+x/3*(1+x/4*(1+x/5*(1+x/
+    6*(1+x/7*(1+x/8*(1+x/9*(1+x/10)))))))));
+}
+\label{code}
+\end{lstlisting}
+For small arguments $e^x$ is approximated using the geometric series up to the ninth term:
+
+\begin{equation}
+    \label{eq:regime1}
+    e^x \approx \sum_{n = 0}^9 \frac{x^n}{n!} \; ,\;\;\; x \in [0,0.125]
+\end{equation}
+In the source code the sum us convoluted so the minimum number of multiplications and additions is used. For larger arguments $e^x$ is evaluated recursively, using the algebraic identity:
+
+\begin{equation}
+    \label{eq:regime2}
+    e^x = (e^{x/2})^2, \;\; \textrm{used for}\;\;  x > 0.125
+\end{equation}
+As seen the argument is halfed in each recursion step until the regime defined by eq. \ref{eq:regime1} is reached. For negative arguments $e^x$ is evaluated as the reciprocal of the correponding positive argument:
+
+\begin{equation}
+    \label{eq:regime3}
+    e^{-x} = \frac{1}{e^x} \;\; \textrm{used for}\;\;  x < 0
+\end{equation}
+
+
+\begin{figure}
+    \input{figures/ex_plot.tex}
+    \caption{The approximation is very precise}
+    \label{fig:result}
+\end{figure}
+
+
+\section{Results}
+For moderate values of x the approximation is very precise. The deviation of $ex(x)$ from $exp(x)$ is so small we have no chance of observing the difference in a direct plot of the values as in fig. \ref{fig:result}.
+
+
+
+\begin{figure}
+   \input{figures/exerror_plot.tex}
+    \caption{The relative error rises in steps due to the recursive definition of the approximation}
+   \label{fig:result2}
+\end{figure}
+
+Instead we consider the relative deviation from the system math value of $exp(x)$, see fig. \ref{fig:result2}. We notice that the deviation is larger for larger absolute values of x. The deviation rises in steps, which is natural since the approximation for each octave interval $]2^{n},2^{n+1}]$ is inherited from the previous down to the 'mould' of the approximation at $]2^{-4},2^{-3}]$. Since
+\begin{equation}
+    \frac{ex(2x)}{exp(2x)} = \left( \frac{ex(x)}{exp(x)} \right)^2
+\end{equation}
+we can estimate the deviation at $e^{709} \approx 1 \times 10^{308}$, the largest double allowed in \texttt{C\#}. The approximation for this value is six 'generations' up from the the $]8,16]$-interval which we read from fig. \ref{fig:result2} to have a relative deviation at about $1 + 1.5 \times 10^{-14}$. Hence, using
+$(1 + \epsilon)^2 \approx (1 + 2 \epsilon)$ the relative deviation at the maximum calculable value will be about $1 + 9.6 \times 10^{-13}$. Not that bad.
+
+
+
+
+\section{Conclusion}
+We have successfully shown that $e^x$ can be estimated using only multiplications and additions. 
+
+
+\end{document}

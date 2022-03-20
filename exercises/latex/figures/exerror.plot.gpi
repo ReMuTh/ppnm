@@ -1,0 +1,8 @@
+set terminal epslatex color colortext
+set output 'figures/exerror_plot.tex' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key left top 
+set title 'Devation from system math value'
+plot 'ex.data.txt' using 1:3 with lines title "$\\frac{ex(x)}{exp(x)}-1$"
+set output

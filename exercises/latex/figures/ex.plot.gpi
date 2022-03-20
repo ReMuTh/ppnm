@@ -1,0 +1,9 @@
+# nice to use vector based eps for the report
+
+set terminal epslatex color colortext
+set output 'figures/ex_plot.tex' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key left top 
+set title 'Approximating the exponential function'
+plot [-3:3] [0:20] 'ex.data.txt' index 0 using 1:2 with lines title 'ex(x)',exp(x) with points title 'Exp(x)'

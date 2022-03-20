@@ -1,0 +1,10 @@
+N=5E+07
+harm: summing from 1 to 50000001
+harm: summing from 1 to 50000001 yields 18,3047492382933
+harm sum from 1 to 50000000 is 18,3047492382933
+N=5E+07
+Thread: Summing from 1 to 25000000
+Thread: Summing from 25000000 to 50000001
+Thread summing from 25000000 to 50000001 yields 0,69314721056011
+Thread summing from 1 to 25000000 yields 17,6116020277299
+harm sum from 1 to 50000000 is 18,30474923829
