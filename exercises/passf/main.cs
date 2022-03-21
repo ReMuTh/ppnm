@@ -10,11 +10,11 @@ class main{
 		WriteLine("\nSin(x) from 0 to 2π in 21 steps");
 		table.make_table(sinkx,0,Math.PI*2,Math.PI/10);
 
-		k = 2.0;
+		k = 2;
 		WriteLine("\nSin(2x) from 0 to 2π in 21 steps");
 		table.make_table(sinkx,0,Math.PI*2,Math.PI/10);
 
-		k = 3.0;
+		k = 3;
 		WriteLine("\nSin(3x) from 0 to 2π in 21 steps");
 		table.make_table(sinkx,0,Math.PI*2,Math.PI/10);
 
