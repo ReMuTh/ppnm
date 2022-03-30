@@ -1,0 +1,32 @@
+set term eps size 8in, 6in
+set output 'gamma.gnuplot.eps' 
+set xlabel 'x'
+set ylabel 'y' 
+set key right bottom 
+set title '{/:Bold Gamma function}'
+#  vertical lines to indicate poles
+do for [i = 0:5] {
+    x = -5 + i
+    set arrow from x,-5 to x,5 nohead lc rgb 'blue' dt (10,10)
+}
+
+plot [-5:5] [-5:5] 'gamma.data.txt' index 0 using 1:2 with lines title 'Approx gamma function' lt rgb 'red','gamma.tab.txt' with points title 'tab values' lt rgb 'dark-green'
+
+clear
+set term pngcairo size 1200, 900
+set termoption dashed
+set output 'gamma.gnuplot.png' 
+set xlabel 'x'
+set ylabel 'y' 
+set key right bottom 
+set title '{/:Bold Gamma function}'
+#  vertical lines apparantly gets inherited from the other terminal
+# I don't 100% understand why this is
+
+plot [-5:5] [-5:5] 'gamma.data.txt' index 0 using 1:2 with lines title 'Approx gamma function' lt rgb 'red','gamma.tab.txt' with points title 'tab values' lt rgb 'dark-green'
+
+
+
+
+
+

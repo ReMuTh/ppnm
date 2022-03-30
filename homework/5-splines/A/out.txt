@@ -1,0 +1,2 @@
+Interpolated value: y(2.56) = 0.526617894467649
+Integrated value at x=2.56: -0.160077203708269

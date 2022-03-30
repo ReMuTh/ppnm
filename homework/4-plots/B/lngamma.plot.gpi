@@ -1,0 +1,25 @@
+set term eps size 8in, 6in
+set output 'lmgamma.gnuplot.eps' 
+set xlabel 'x'
+set ylabel 'y' 
+set key right bottom 
+set title '{/:Bold lngamma function}'
+
+plot [0:20] [-1:40] 'lngamma.data.txt' index 0 using 1:2 with lines title 'Approx ln gamma function' lt rgb 'red','lngamma.tab.txt' with points title 'tab values' lt rgb 'dark-green'
+
+clear
+set term pngcairo size 1200, 900
+set termoption dashed
+set output 'lmgamma.gnuplot.png' 
+set xlabel 'x'
+set ylabel 'y' 
+set key right bottom 
+set title '{/:Bold ln gamma function}'
+
+plot [0:20] [-1:40] 'lngamma.data.txt' index 0 using 1:2 with lines title 'Approx ln gamma function' lt rgb 'red','lngamma.tab.txt' with points title 'tab values' lt rgb 'dark-green'
+
+
+
+
+
+

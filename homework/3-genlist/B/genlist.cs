@@ -15,7 +15,7 @@ public class genlist<T>{
         }
 		public void remove(int i){
 		
-		if(i > 0 & i < size) {
+		if(i >=  0 & i < size) {
 		
 			// Descreasing size by one
 			size--;
