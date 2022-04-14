@@ -1,0 +1,10 @@
+set term svg size 600,600 dynamic
+set output 'three_body_1.svg' 
+set xlabel 'x' 
+set ylabel 'y' 
+#set key spacing 0.8
+set key top right
+set title "Three body problem 1"
+plot [-25:25] [-25:25]  'three_body_data_1.txt' u 2:3  w lines lw 2 lc rgb 'medium-blue' t 'particle 1 trajectory',\
+'three_body_data_1.txt' u 4:5  w lines lw 2 lc rgb 'red' t 'particle 2 trajectory',\
+'three_body_data_1.txt' u 6:7  w lines lw 2 lc rgb 'green' t 'particle 3 trajectory'

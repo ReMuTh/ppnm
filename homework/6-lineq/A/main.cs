@@ -12,7 +12,7 @@ static void Main(){
 	int max2 = 99;
 
 	var T = random_int_matrix(n,m,max1);	
-	T.print($"Homework A, part 1\nCreating {n}-by-{m} matrix of random integers between {-max1} and {max1}");
+	T.print($"Homework A, part 1\nCreating {n}-by-{m} matrix, T of random integers between {-max1} and {max1}");
 
 	WL("\nPerforming QR decomposisition");
 	var TestQR = new QRGS(T);
@@ -24,14 +24,14 @@ static void Main(){
 
 
 	matrix QR = TestQR.Q*TestQR.R.copy();
-	QR.print("\nThis is Q*R. Should be equal to A");
+	QR.print("\nThis is Q*R. Should be equal to T");
 
 	if (T.approx(QR)) WL("PASSED");else WL("FAILED");
 
 	matrix QTQ = TestQR.Q.T*TestQR.Q;
 	var Id = new matrix(m,m);
 	Id.setid();
-	QTQ.print("\nThis is QT*Q. Should be idendity matrix (U is unitary)");
+	QTQ.print("\nThis is QT*Q. Should be identity matrix (proving U is unitary)");
 	if (Id.approx(QTQ)) WL("PASSED");else WL("FAILED");
 
 

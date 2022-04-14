@@ -1,4 +1,4 @@
-// (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty.
+	// (C) 2020 Dmitri Fedorov; License: GNU GPL v3+; no warranty.
 using System;
 using static System.Math;
 public partial class matrix{
@@ -100,7 +100,7 @@ public static vector operator* (matrix a, vector v){
 	for(int k=0;k<a.size2;k++)
 	for(int i=0;i<a.size1;i++)
 		u[i]+=a[i,k]*v[k];
-	return u;
+		return u;
 	}
 
 public static vector operator% (matrix a, vector v){
@@ -231,22 +231,6 @@ public bool approx(matrix B,double acc=1e-6, double eps=1e-6){
 			if(!approx(this[i,j],B[i,j],acc,eps))
 				return false;
 	return true;
-}
-
-// RENE 2022-04-02 additions
-public bool is_lower_triangular(double acc=1e-6, double eps=1e-6){
-	// First check whether square
-	if(this.size1!=this.size2)return false;
-
-	for(int i=0;i<size1-1;i++)
-		for(int j=i+1;j<size1;j++)
-			if(!approx(this[i,j],0,acc,eps))
-				return false;
-	return true;
-}
-
-public bool is_upper_triangular(double acc=1e-6, double eps=1e-6){
-	return this.T.is_lower_triangular(acc,eps);
 }
 
 }//matrix

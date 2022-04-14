@@ -1,0 +1,39 @@
+Doing Various Integrals using numeric quadratures, with precision delta=1E-06, epsilon=1E-06:
+Comparing to scipy.integrate.quad with same accuracy goals
+
+Integrating Sqrt(x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 0.666666679595362
+Reference value is 0.666666666666667)
+PASSED
+C# routine used 280 integrant evaluations.
+Python used 231 evaluations
+
+Integrating 1/Sqrt(x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.99999999923004
+Reference value is 2)
+PASSED
+C# routine used 132436 integrant evaluations.
+Python used 231 evaluations
+
+Integrating 4/Sqrt(1-x*x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 6.2831852812354
+Reference value is 6.28318530717959)
+PASSED
+C# routine used 8596 integrant evaluations.
+Python used 273 evaluations
+
+Integrating Log(x)/Sqrt(x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is -3.99999999956196
+Reference value is -4)
+PASSED
+C# routine used 309440 integrant evaluations.
+Python used 315 evaluations
+
+Integrating sin(x) from 0 to 6.28318530717959 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 4.65049133067818E-16
+Reference value is 0)
+PASSED
+C# routine used 4 integrant evaluations.
+Python used 21 evaluations
+
+Evaluating the error function from z=-3 to z=3 and putting result in external file

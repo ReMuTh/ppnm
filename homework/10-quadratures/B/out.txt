@@ -1,0 +1,50 @@
+Integrating using Clenshaw-Curtis variable substitution. delta=1E-06, epsilon=1E-06.
+Comparing to not using substutution and Python's scipy.integrate.quad method:
+
+
+Integrating 1/Sqrt(x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.99999999923004
+Reference value is 2
+PASSED
+C# quad routine used 132436 integrant evaluations.
+Python used 231 evaluations
+
+Integrating 1/Sqrt(x) from 0 to 1 using cc_quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.99999999995955
+Reference value is 2
+PASSED
+C# cc_quad routine used 396 integrant evaluations.
+Python used 231 evaluations
+
+In this case using Clenshaw-Curtis reduces the number of integrand evaluations by a factor better than 1/300.
+Although the substitution adds calculation of Sin and Cos for each evaluation, this is substantial difference.
+The efficiency is in the ballpark of scipy.integrate.quad.
+More examples:
+
+Integrating Log(x)/Sqrt(x) from 0 to 1 using quad with accuracy delta=0.0001 epsilon=0.0001
+Result is -3.99999913571516
+Reference value is -4
+PASSED
+C# quad routine used 30200 integrant evaluations.
+
+Integrating Log(x)/Sqrt(x) from 0 to 1 using cc_quad with accuracy delta=0.0001 epsilon=0.0001
+Result is -3.99999921497309
+Reference value is -4
+PASSED
+C# cc_quad routine used 324 integrant evaluations.
+Python used 315 evaluations
+Note: I actually had to increase the delta and epsilon on the Log(x)/Sqrt(x) integral (1e-6 => 1e-4)
+To avoid stack overflow. I am not entirely sure why this happens.
+
+Integrating Sqrt(Tan(x)), from 0 to 1.5707963267949 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 2.2214414656779
+Reference value is 2.22144146907918
+PASSED
+C# quad routine used 8428 integrant evaluations.
+
+Integrating Sqrt(Tan(x)) from 0 to 1.5707963267949 using cc_quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 2.22144146878973
+Reference value is 2.22144146907918
+PASSED
+C# cc_quad routine used 536 integrant evaluations.
+Python used 189 evaluations

@@ -43,7 +43,7 @@ public void print(string s="",string format="{0,10:g3} "){
 	}
 
 public void fprint(TextWriter file,string s="",string format="{0,10:g3} "){
-	if (s != "") file.WriteLine(s);
+	if (s != "") file.Write(s);
 	for(int i=0;i<size;i++) file.Write(format,this[i]);
 	file.Write("\n");
 }

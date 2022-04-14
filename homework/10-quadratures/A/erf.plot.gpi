@@ -1,0 +1,8 @@
+set terminal svg size 800,450 dynamic
+set output 'erf.gnuplot.svg' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key left top 
+set title '{/:Bold The error function by integration}'
+plot [-3.1:3.1] [-1.1:1.1] 'erf.data.txt' u 1:2 w lines t 'Erf(x)',\
+'erf.tab.txt' w points t 'Reference values' 

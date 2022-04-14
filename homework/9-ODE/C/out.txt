@@ -1,0 +1,23 @@
+HOMEWORK 9-ODE PART C
+
+Surprising solution to three-body problem
+Coding up the dynamics function quite literal, which OK for just three bodies
+For more than three it should be done more iterative.
+
+Before jumping to the stable solution, let's see if we can
+replicate the more typical chaotic behaviour.
+
+Setting up with initial zero velocity and some positions…
+Plot three_body_1.svg shows expected erratic trajectories ;-)
+
+Now setting up Carles Simo's initial values Taken from the Chenciner and Montgomery paper.
+
+If we've done newtonian gravitation dynamics right and set up the inital values correctly,
+then running the evolution for T=6.32591398 should return the state vector to same position
+That is positions and velocity vectors for all three particles
+        x1         y1         x2         y2         x3         y3       vx1         vy1        vx2        vy2        vx3        vy3
+      0.97     -0.243      -0.97      0.243          0          0      0.466      0.432      0.466      0.432     -0.932     -0.865 
+      0.97     -0.243      -0.97      0.243   1.56e-06   1.39e-06      0.466      0.432      0.466      0.432     -0.932     -0.865 
+PASSED
+Running the evolution for T/3=2.10863799333333 should precisely rotate-permute the particles to take each others place
+keeping the data points and plotting them (three_body_2.svg) we see that is indeed the case.

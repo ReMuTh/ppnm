@@ -1,0 +1,16 @@
+HOMEWORK 10-montecarlo
+
+Testing plain montecarlo routine
+
+Let's start out simple and integrate f(x,y) = x*y^2
+in the area 0<=x<=2, y<=0<=1, 10.000 samples
+Result:   0.6732 ± 0.0079
+Analytical:  2/3 = 0.66666
+PASSED
+
+Let's do a halfsphere. Function that is zero except within the unit circle
+where it forms half a unit sphere. Graph looks like a Verner Panton panel from the 1960s
+1.000.000 samples in the area -1<x<1, -1<y<1
+Result: 2.0940 ± 0.0014
+Analytical: 2/3*PI = 2.0943
+PASSED

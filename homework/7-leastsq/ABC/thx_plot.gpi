@@ -1,0 +1,9 @@
+set term svg size 600,400 dynamic
+set output 'Thx_decay.svg' 
+set xlabel 'Time [days]' 
+set ylabel 'Activity [arb]' 
+set key left top
+set logscale y
+set key right top
+set title '{/:bold Rutherford and Soddy 1902 ThX Decay data}'
+plot [0:16] [10:150] 'thx_data.txt' u 1:2:3 w yerr t 'Data' pt 7 ps 0.5,'thx_data.txt' u 1:4 w lines t '{Best fit, half-life: 4.0 ± 0.1 days}' lt 10,'thx_data.txt' u 1:5 w lines t 'Hi Fit' lt 10,'thx_data.txt' u 1:6 w lines t 'Lo Fit' lt 10,

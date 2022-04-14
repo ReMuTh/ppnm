@@ -1,0 +1,66 @@
+HOMEWORK 9-ODE PART A
+Trying my luck with the renowned FORTRAN rkf45 stepper
+
+Implimented two different drivers.
+1. driver_ab integrates the ODE from a to b and delivers y and the number of integration steps used.
+2. driver_ab_incr that does the same but returns genlists with all the integration steps.
+To reproduce graph data like in the scipy.odeint we of course want to use the latter,
+since driver_ab would wastefully do the iteration all the way from a over and over for each datapoint.
+
+TEST 1:
+driver_ab on the simple 1D uncoupled example
+
+y' = 1 + y^2
+
+Tan(x) satisfies this, so initiated with y(0)=0 the ODE should yield tan(x) values,
+becoming increasingly difficult as x approaches PI/2.
+So trying a=0, b=1.5, acc=1e-5, eps=1e-5. Initial h=0.1
+(if h was constant, b would be reached in 15 steps)
+
+Result is y(1.5)=14.1076950427507 reached in 30 steps.
+Comparison: tan(1.5) = 14.1014199471717
+Relative error: 0.000445      Absolute error: 0.00628 
+We notice that the driver shifts towards more granular steps than the inital h.
+
+TEST 2:
+Arrive at Eulers constant using
+
+y' = y from y(0) = 1
+
+a=0, b=1, acc=1e-7, eps=1e-7. Initial h=0.001
+
+Result is y(1)=2.71827678260636 reached in 11 steps.
+Comparison: e = 2.71828182845905
+Relative error: -1.86E-06      Absolute error: -5.05E-06 
+We notice that the driver shifts towards more coarse steps than the inital h.
+
+TEST 3:
+Handling vector arguments to solve y'' = -y
+With boundary condition y(0) = 0, y'(0) = 1 the solution should be sin(x).
+Double derivative packaged as
+y1' = y2
+y2' = -y1
+y2 then becomes cos x with same boundary conditions
+
+Result is y(PI)=1.14173672358109E-06,-1.00000495333204 reached in 17 steps.
+Comparison: sin(PI)=0, cos(PI)=-1
+Absolute errors 1.14E-06 Absolute error: -4.95E-06
+
+TEST 4:
+Running the same ODE as in TEST 3 through driver_ab_incr to retrieve the increments.odeint.
+a = 0, b = 2*PI, h0 = 0.5, acc=1e-3, eps=1e-3.
+
+Integrated from x=0 to x=2*PI in 14 steps.
+Saving to datafile. plot shown in ode_sincos.svg.
+The takeaway from the plot is just how few increments rk45 needs to do a full cycle
+of sin and cos to good accuracy.
+
+TEST 5:
+Replicate friction pendulum example from scipy.integrate.odeint
+Not much to say, we have the tools.
+Defining the functions and running with a higher accuracy goal,
+acc=1e-7, eps=1e-7.
+mostly to obtain more integration points for the plots.
+
+Integrated from t=0 to t=10 in 267 steps.
+Saving to datafile

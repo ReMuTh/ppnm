@@ -1,0 +1,11 @@
+set term svg size 600,400 dynamic
+set output 'ode_sincos.svg' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key spacing 0.8
+set key bottom left
+set title "y'' = -y solved as ODE using RK45"
+plot [-0.1:2*pi+0.1] [-1.1:1.1]'ode_sincos_data.txt' u 1:2 w points t 'y1[x]',\
+'ode_sincos_data.txt' u 1:3 w points t 'y2[x]',\
+sin(x),cos(x)
+
