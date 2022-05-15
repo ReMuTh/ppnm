@@ -1,3 +1,4 @@
+using static Integrator;
 using System;
 using static System.Math;
 
@@ -8,11 +9,18 @@ class main{
 
 	static void Main() {
 
-
 		// epsilon and delta
 
+		WL($"Homework quadratures PART B:");
 		WL($"Integrating using Clenshaw-Curtis variable substitution. delta={d}, epsilon={e}.");
-		WL($"Comparing to not using substutution and Python's scipy.integrate.quad method:\n");
+		WL($"Comparing to integration without substutution and Python's scipy.integrate.quad method:\n");
+
+		WL($"First testing integrity of the a = -1, b = 1 substition with a non-divergent integral. A half circle:");
+
+		test_quad(x => Sqrt(1-x*x), -1, 1,PI/2,"Sqrt(1-x*x)","quad",d,e,399);
+		test_quad(x => Sqrt(1-x*x), -1, 1,PI/2,"Sqrt(1-x*x)","cc_quad",d,e,399);
+
+		WL($"The substition (which becomes an intefral of sin^2(theta)) handles this case particularly well.");
 
 		// Syntactic sugar allows to pass anonymous lambda function directly to the test and - in turn - integrator
 		test_quad(x => 1/Sqrt(x), 0, 1,2.0,"1/Sqrt(x)","quad",d,e,231);
@@ -34,37 +42,8 @@ To avoid stack overflow. I am not entirely sure why this happens.");
 		test_quad(x => Sqrt(Tan(x)), 0, PI/2,PI/Sqrt(2),"Sqrt(Tan(x)),","quad",d,e);
 		test_quad(x => Sqrt(Tan(x)), 0, PI/2,PI/Sqrt(2),"Sqrt(Tan(x))","cc_quad",d,e,189);
 
+		WL("\nJupiter Notebook used to retrieve the Python results is included in the lib folder");
+
 	}
-
-	static void WL(string s="") {
-		System.Console.WriteLine(s);
-	} // lazy write
-
-	static void test_quad(Func<double,double> f,double limit_a, double limit_b,
-		double reference,string text,string method = "quad",
-		double d=1e-6,double e=1e-6,int python_compare=0) {
-		WL($"\nIntegrating {text} from {limit_a} to {limit_b} using {method} with accuracy delta={d} epsilon={e}");
-		double res = 0;
-		var INT = new integrator();
-
-		if(method == "quad") {res = INT.quad(f, limit_a, limit_b, d, e);}
-		if(method == "cc_quad") {res = INT.cc_quad(f, limit_a, limit_b, d, e);}
-
-		WL($"Result is {res}");
-		WL($"Reference value is {reference}");
-		if (approx(res, reference, d, e)) WL("PASSED");
-		else WL("FAILED");
-		WL($"C# {method} routine used {INT.evals} integrant evaluations.");
-		if(python_compare > 0) {
-			WL($"Python used {python_compare} evaluations");
-	
-		}
-	}
-
-	static bool approx(double a, double b, double acc=1e-6, double eps=1e-6){
-		if(Abs(a-b)<acc) return true;
-		if(Abs(a-b)/Max(Abs(a),Abs(b)) < eps)return true;
-	return false;
-}
 
 }

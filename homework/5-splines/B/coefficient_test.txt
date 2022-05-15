@@ -1,0 +1,25 @@
+TESTING quadspline coefficients
+
+TEST 1. Constant function
+x = {1, 2, 3, 4, 5}
+y = {1, 1, 1, 1, 1}
+
+We expect all b and c spline coefficients to be zero
+b = {0, 0, 0, 0}
+c = {0, 0, 0, 0}
+
+TEST 2. Linear function
+x = {1, 2, 3, 4, 5}
+y = {1, 2, 3, 4, 5}
+
+We expect all b coefficients to be 1, and all c to be 0
+b = {1, 1, 1, 1}
+c = {0, 0, 0, 0}
+
+TEST 3. Quadratic function
+x = {1, 2, 3, 4, 5}
+y = {1, 4, 9, 16, 25}
+
+We expect b coeffs to be linearly rising {2,4,6,8} and all c coefficients to be 1.
+b = {2, 4, 6, 8}
+c = {1, 1, 1, 1}

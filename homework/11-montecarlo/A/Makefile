@@ -14,7 +14,7 @@ out.txt: main.exe
 main.exe: main.cs lib.dll
 	mcs -reference:lib.dll main.cs
 
-lib.dll : ../lib/vector.cs ../lib/vector_rene.cs
+lib.dll : ../lib/vector.cs ../lib/vector_rene.cs ../lib/montecarlo.cs
 	mcs -target:library -out:$@ $^
 
 clean:

@@ -1,3 +1,4 @@
+using static Integrator;
 using System;
 using static System.Math;
 
@@ -8,9 +9,8 @@ class main{
 
 	static void Main() {
 
-
 		// epsilon and delta
-
+		WL($"Homework quadratures PART A:");
 		WL($"Doing Various Integrals using numeric quadratures, with precision delta={d}, epsilon={e}:");
 		WL($"Comparing to scipy.integrate.quad with same accuracy goals");
 
@@ -25,47 +25,21 @@ class main{
 
 		WL("\nEvaluating the error function from z=-3 to z=3 and putting result in external file");
 
-		double erf;
+		double erf,err;
 		var outstream=new System.IO.StreamWriter("erf.data.txt");
-		var INT = new integrator();
+
 		for(double z = -3.0;z<3.01;z+=0.02) {
 			// Not entirely happy with the efficiency of this since we're evaluating the entire
 			// erf integral every time. We could just do slivers and add up to an accumulated result
 			// But, since it's just a demo and we're only evaluating 300 z values, let it go…
-			erf = 2/Sqrt(PI)*INT.quad(x => Exp(-x*x), 0, z, d, e);
-			outstream.WriteLine($"{z}	{erf}");
+
+			(erf,err) = quad(x => Exp(-x*x), 0, z, d, e);
+			
+			// Adding the front factor in the aftermath, no need to do that multiplication on all evalutation
+			outstream.WriteLine($"{z}	{erf*2/Sqrt(PI)}");
 		}
 		outstream.Close();
 
 	}
-
-	static void WL(string s="") {
-		System.Console.WriteLine(s);
-	} // lazy write
-
-	static void test_quad(Func<double,double> f,double limit_a, double limit_b, double reference,string text,string method = "quad",int python_compare=0) {
-		WL($"\nIntegrating {text} from {limit_a} to {limit_b} using {method} with accuracy delta={d} epsilon={e}");
-		double res = 0;
-		var INT = new integrator();
-
-		if(method == "quad") {res = INT.quad(f, limit_a, limit_b, d, e);}
-		if(method == "cc_quad") {res = INT.cc_quad(f, limit_a, limit_b, d, e);}
-
-		WL($"Result is {res}");
-		WL($"Reference value is {reference}");
-		if (approx(res, reference, d, e)) WL("PASSED");
-		else WL("FAILED");
-		WL($"C# routine used {INT.evals} integrant evaluations.");
-		if(python_compare > 0) {
-			WL($"Python used {python_compare} evaluations");
-	
-		}
-	}
-
-	static bool approx(double a, double b, double acc=1e-6, double eps=1e-6){
-		if(Abs(a-b)<acc)return true;
-		if(Abs(a-b)/Max(Abs(a),Abs(b)) < eps)return true;
-	return false;
-}
 
 }

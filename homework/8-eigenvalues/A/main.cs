@@ -14,7 +14,7 @@ static void Main(){
 	test(A.approx(A.T));
 
 	
-	WL("\nComparing timesJ and Jtimes routines with matrix multiplications with literal constructed Jacobi rotation matrix");
+	WL("\nComparing timesJ and Jtimes routines with matrix multiplications with literal constructed Jacobi rotation matrix:");
 	var r = new Random();
 	int p = r.Next(0,n-1);
 	int q = r.Next(p+1,n-1);
@@ -28,30 +28,32 @@ static void Main(){
 
 	J.print($"J with p={p} q={q}. Angle to eliminate matrix element ({p},{q}) in A is theta: {theta:G4}:");
 	matrix AJ = A*J;
-	AJ.print("A*J by literal matrix mult is:");
+	AJ.print("\nA*J by literal matrix mult is:");
 	var Jac = new Jacobi(A);
+	Jac.verbose = 1;
 	Jac.timesJ(Jac.D,p,q,theta);
-	Jac.D.print("timesJ(A,p,q,theta) result is:");
+	Jac.D.print("\ntimesJ(A,p,q,theta) result is:");
 	test(AJ.approx(Jac.D));
 
 	matrix JTAJ=J.T*AJ;
-	JTAJ.print("J^T*S*J by literal matrix mult is:");
+	JTAJ.print("\nJ^T*S*J by literal matrix mult is:");
 	Jac.Jtimes(Jac.D,p,q,-theta);
-	Jac.D.print("timesJ(A,p,q,-theta) result is:");
+	Jac.D.print("\ntimesJ(A,p,q,-theta) result is:");
 	test(JTAJ.approx(Jac.D));
 
-	WL($"Are elements ({p},{q}) and ({q},{p}) indeed ≈ 0?");
+	WL($"\nAre elements ({p},{q}) and ({q},{p}) indeed ≈ 0?");
 	test(vector.approx(Jac.D[p,q],0));
 	test(vector.approx(Jac.D[q,p],0));
 
 	WL("\nReinitialize and proceed with diagonalize");
 	Jac = new Jacobi(A);
+	Jac.verbose = 1;
 	(matrix D, matrix V) = Jac.diagonalize();
 
-	D.print($"Result after {Jac.num_sweeps} sweeps:\nD = ");
-	V.print("V = ");
+	D.print($"\nResult after {Jac.num_sweeps} sweeps:\nD = ");
+	V.print("\nV = ");
 
-	WL("\n Is D indeed diagonal?");
+	WL("\nIs D indeed diagonal?");
 	test(D.is_diagonal());
 
 	matrix VTAV = V.T*A*V;

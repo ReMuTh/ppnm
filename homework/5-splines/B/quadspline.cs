@@ -2,7 +2,8 @@ using System;
 
 public class quadspline {
 
-	static double[] x,y,b,c,s;
+	static double[] x,y,s;
+	public double[] b,c;
 	static int n;
 	static int lastbin = 0;
 	
@@ -39,7 +40,7 @@ public class quadspline {
 	    	b[i] = p[i] - c[i]*dx[i];
 	    	s[i+1] = s[i] + y[i] * dx[i] + (b[i] * dx[i]*dx[i])/2 + (c[i] * dx[i]*dx[i]*dx[i])/3;
 	    	
-	    System.Console.WriteLine($"{i} {c[i]}");
+	    // System.Console.WriteLine($"{i} {c[i]}");
 		}
 	} // Constructor
 	

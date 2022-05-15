@@ -1,16 +1,33 @@
+Homework quadratures PART B:
 Integrating using Clenshaw-Curtis variable substitution. delta=1E-06, epsilon=1E-06.
-Comparing to not using substutution and Python's scipy.integrate.quad method:
+Comparing to integration without substutution and Python's scipy.integrate.quad method:
 
+First testing integrity of the a = -1, b = 1 substition with a non-divergent integral. A half circle:
+
+Integrating Sqrt(1-x*x) from -1 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.57079633968504, estimated error is 4.8E-007
+Reference value is 1.5707963267949
+PASSED
+C# quad routine used 832 integrant evaluations.
+Python used 399 evaluations
+
+Integrating Sqrt(1-x*x) from -1 to 1 using cc_quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.5707963267949, estimated error is 2.5E-016
+Reference value is 1.5707963267949
+PASSED
+C# cc_quad routine used 8 integrant evaluations.
+Python used 399 evaluations
+The substition (which becomes an intefral of sin^2(theta)) handles this case particularly well.
 
 Integrating 1/Sqrt(x) from 0 to 1 using quad with accuracy delta=1E-06 epsilon=1E-06
-Result is 1.99999999923004
+Result is 1.99999999923004, estimated error is 4.9E-007
 Reference value is 2
 PASSED
 C# quad routine used 132436 integrant evaluations.
 Python used 231 evaluations
 
 Integrating 1/Sqrt(x) from 0 to 1 using cc_quad with accuracy delta=1E-06 epsilon=1E-06
-Result is 1.99999999995955
+Result is 1.99999999995955, estimated error is 4.5E-007
 Reference value is 2
 PASSED
 C# cc_quad routine used 396 integrant evaluations.
@@ -22,13 +39,13 @@ The efficiency is in the ballpark of scipy.integrate.quad.
 More examples:
 
 Integrating Log(x)/Sqrt(x) from 0 to 1 using quad with accuracy delta=0.0001 epsilon=0.0001
-Result is -3.99999913571516
+Result is -3.99999913571516, estimated error is 5.9E-005
 Reference value is -4
 PASSED
 C# quad routine used 30200 integrant evaluations.
 
 Integrating Log(x)/Sqrt(x) from 0 to 1 using cc_quad with accuracy delta=0.0001 epsilon=0.0001
-Result is -3.99999921497309
+Result is -3.99999921497309, estimated error is 5.4E-005
 Reference value is -4
 PASSED
 C# cc_quad routine used 324 integrant evaluations.
@@ -37,14 +54,16 @@ Note: I actually had to increase the delta and epsilon on the Log(x)/Sqrt(x) int
 To avoid stack overflow. I am not entirely sure why this happens.
 
 Integrating Sqrt(Tan(x)), from 0 to 1.5707963267949 using quad with accuracy delta=1E-06 epsilon=1E-06
-Result is 2.2214414656779
+Result is 2.2214414656779, estimated error is 5.4E-007
 Reference value is 2.22144146907918
 PASSED
 C# quad routine used 8428 integrant evaluations.
 
 Integrating Sqrt(Tan(x)) from 0 to 1.5707963267949 using cc_quad with accuracy delta=1E-06 epsilon=1E-06
-Result is 2.22144146878973
+Result is 2.22144146878973, estimated error is 5.0E-007
 Reference value is 2.22144146907918
 PASSED
 C# cc_quad routine used 536 integrant evaluations.
 Python used 189 evaluations
+
+Jupiter Notebook used to retrieve the Python results is included in the lib folder

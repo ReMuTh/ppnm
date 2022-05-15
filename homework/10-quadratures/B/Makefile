@@ -1,8 +1,5 @@
-all: out.txt #erf.gnuplot.svg
+all: out.txt 
 	cat out.txt
-
-#erf.gnuplot.svg: erf.data.txt erf.tab.txt erf.plot.gpi	
-#	gnuplot erf.plot.gpi	
 
 erf.data.txt out.txt: main.exe
 	mono $< > $@
@@ -15,4 +12,4 @@ integrate.dll : ../lib/integrate.cs
 	mcs -target:library -out:$@ $^
 
 clean:
-	rm *.dll *.exe *.eps [Oo]ut* *.svg
+	rm *.dll *.exe [Oo]ut*

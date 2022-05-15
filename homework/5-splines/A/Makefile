@@ -1,7 +1,7 @@
-all: out.txt linear_interpolation.eps
+all: out.txt linear_interpolation.svg
 	cat out.txt
 
-linear_interpolation.eps : input_data.txt interpolated_data.txt linearplot.gpi
+linear_interpolation.svg : input_data.txt interpolated_data.txt linearplot.gpi
 	gnuplot linearplot.gpi
 
 interpolated_data.txt out.txt: main.exe input_data.txt Makefile
@@ -13,6 +13,6 @@ main.exe : main.cs
 PHONY : clean
 clean:
 	rm *.exe
-	rm *.eps
+	rm *.svg
 	rm out.txt
 	

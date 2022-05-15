@@ -125,6 +125,7 @@ public class interpol {
         double dy=y[i+1]-y[i];
         return y[i]+dy/dx*(z-x[i]);
     }
+    
 	// fine_integration rely on both precalculated coarse integratation
 	// also, it relies on the interpolation at z, so linterp only has to
 	// be called once per interpolation point

@@ -1,0 +1,33 @@
+Homework quadratures PART C:
+Now testing improper integrals with one or both limits at infinite delta=1E-06, epsilon=1E-06.
+Comparing to Python's scipy.integrate.quad method:
+
+
+Right limit infinite:
+
+Integrating 1/x^2 from 1 to Infinity using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1, estimated error is 1.1E-016
+Reference value is 1
+PASSED
+C# quad routine used 4 integrant evaluations.
+Python used 15 evaluations
+
+Left limit minus infinite:
+
+Integrating 1/(1+x^2) from -Infinity to 0 using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.57079633113225, estimated error is 5.8E-007
+Reference value is 1.5707963267949
+PASSED
+C# quad routine used 352 integrant evaluations.
+Python used 45 evaluations
+
+Both limits infinite. Let's try a Gauss distribution:
+
+Integrating exp(-x^2) from -Infinity to Infinity using quad with accuracy delta=1E-06 epsilon=1E-06
+Result is 1.77245381326689, estimated error is 4.9E-007
+Reference value is 1.77245385090552
+PASSED
+C# quad routine used 1312 integrant evaluations.
+Python used 210 evaluations
+
+Jupiter Notebook used to retrieve the Python results is included in the lib folder

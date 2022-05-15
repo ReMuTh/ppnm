@@ -1,8 +1,5 @@
 all: out.txt; cat $<
 
-#Thx_decay.svg: thx_data.txt thx_plot.gpi	
-#	gnuplot thx_plot.gpi
-
 out.txt: main.exe
 	mono $< > $@
 

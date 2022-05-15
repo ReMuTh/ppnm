@@ -1,8 +1,6 @@
 Homework 5 B. Quadratic spline interpolation 
 René Thalund
 
-Everything put in the main.cs.
-Anything above this complexity should be organised with separate libraries…
 
 main.exe takes the following arguments
 
@@ -41,12 +39,21 @@ Optimization efforts:
 	
 	
 Testing validity of method:
+
+	TEST 1: test_qsplines.exe
+
+	Runs the three input sets suggested in the exercise.
+	Coefficients come out as expected.
+
+	TEST 2: sinus dataset processed using main.exe
+
 	A test input file with 14 scattered values of sin(x) in the interval [-pi,pi], endpoints included.
 	101 even spaced interpolation points and integration are created.
-	Results are plotted in linear_interpolation.eps
+	Results are plotted in:
+	qruadratic_spline_interpolation.svg
 	
-	
-	Checkpoints
+	Checkpoints: 
+
 	The interpolation should appear smooth between and over the input points. Confirmed.
 	
 	The derivative of sin(x) is cos(x). The plot of the spline derivative
@@ -58,4 +65,12 @@ Testing validity of method:
 	As sin(x) is an odd functions the integration should approximately end back in 0 at x=pi. Confirmed
 
 	The analytic integral function from x = -pi is -cos(x)-1
-	Thus the interpolation integral should have a minimum of approximately -2 at x=0. Confirmed [and far better result than the linear interpolation]
+	Thus the interpolation integral should have a minimum of approximately -2 at x=0.
+	Confirmed [and far better result than the linear interpolation]
+
+	TEST 3: Artefact dataset processed using main.exe
+
+	Step function. We notice that the step makes the splines ring and the oscillation is carried over all
+	points pre and post the step-up.
+
+	

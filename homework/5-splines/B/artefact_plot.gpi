@@ -1,0 +1,10 @@
+set terminal svg size 750,525 dynamic
+set output 'quadratic_spline_artefact.svg' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key top left 
+set title '{/:Bold Quadratic spline artefact}'
+plot [-pi:pi] [-2:2] \
+		'input_data_artefact.txt' using 1:2 with points title 'Step function input' pt 1 lt rgb "red", \
+		'artefact_interpol.txt' using 1:2 with lines title 'Interpolation' lt rgb "green" lw 1, \
+

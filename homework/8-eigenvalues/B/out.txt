@@ -1,7 +1,8 @@
 Homework Eigenvalues
 PART B. Hydrogen s wave
+Using optimized routine from part C for this. No reason not to.
 
-Building Hamiltonian matrix with r_max = 10, dr = 0.3, n = 32
+Building Hamiltonian matrix with r_max = 10, dr = 0.3, N = 32
 Top-left 10x10 of H:
       7.78      -5.56          0          0          0          0          0          0          0          0          0 
      -5.56       9.44      -5.56          0          0          0          0          0          0          0          0 
@@ -14,7 +15,7 @@ Top-left 10x10 of H:
          0          0          0          0          0          0          0      -5.56       10.7      -5.56          0 
          0          0          0          0          0          0          0          0      -5.56       10.8      -5.56 
          0          0          0          0          0          0          0          0          0      -5.56       10.8 
-Sweeps 8 Rots 11904
+Sweeps: 8. Rotations: 11904
 Bound energies [a.u]:       -0.489     -0.111 
 Analytical values [a.u]:      -0.5     -0.125 
 Relative difference:         0.978      0.889 
@@ -24,15 +25,15 @@ Two bound states are found. The ground state is found to decent accuracy, n=2 is
 Doubling r_max and halfing dr both leads to twice the side n of Hamiltionian
 Let's see which improves result the most
 
-Building Hamiltonian matrix with r_max = 20, dr = 0.3, n = 65
-Sweeps 10 Rots 62400
+Building Hamiltonian matrix with r_max = 20, dr = 0.3, N = 65
+Sweeps: 10. Rotations: 62400
 Bound energies [a.u]:       -0.489     -0.124    -0.0493 
 Analytical values [a.u]:      -0.5     -0.125    -0.0556 
 Relative difference:         0.978      0.994      0.888 
 Larger r_max not surprisingly finds more bound levels. Error in n=2 improves a lot, error in n=1 is changed by very little
 
-Building Hamiltonian matrix with r_max = 10, dr = 0.15, n = 65
-Sweeps 10 Rots 62400
+Building Hamiltonian matrix with r_max = 10, dr = 0.15, N = 65
+Sweeps: 10. Rotations: 62400
 Bound energies [a.u]:       -0.497     -0.112 
 Analytical values [a.u]:      -0.5     -0.125 
 Relative difference:         0.994      0.895 
@@ -40,8 +41,8 @@ Smaller dr yields a much more precise n=1 value, but does not reveal new levels
 
 Cranking up both to return acceptable values for n=1,2,3,4
 
-Building Hamiltonian matrix with r_max = 40, dr = 0.1, n = 399
-Sweeps 13 Rots 3096639
+Building Hamiltonian matrix with r_max = 40, dr = 0.1, N = 399
+Sweeps: 13. Rotations: 3096639
 Bound energies [a.u]:       -0.499     -0.125    -0.0555    -0.0305    -0.0111 
 Analytical values [a.u]:      -0.5     -0.125    -0.0556    -0.0313      -0.02 
 Relative difference:         0.998      0.999          1      0.977      0.553 

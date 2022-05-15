@@ -14,13 +14,13 @@ public  class Jacobi{
 	public int n;
 	public int num_sweeps;
 	public int num_rotations;
+	public int verbose;
 
 	public Jacobi(matrix A) {
 		if(A.size1 != A.size2) throw new ArgumentException("Jacobi class only on square matrix");
 		// Saving local copy of a
 		this.D = A.copy();
 		this.n = A.size1;
-
 		this.V = new matrix(this.n,this.n);
 		this.V.setid();
 
@@ -31,7 +31,7 @@ public  class Jacobi{
 		return (this.D,this.V); 
 	}
 
-	// To comply with exercise, functions Jtimes and timesJ accepts angle theta.
+	// To comply with exercise secription, functions Jtimes and timesJ accepts angle theta.
 	// However the meat of the diaginalization is done with subfunctions
 	// Jtimes_cs and timesJ_cs
 	// In this way Sin(theta) and Cos(theta) is only calculated once per
@@ -56,7 +56,7 @@ public  class Jacobi{
 			A[i,p] = c*Aip - s*Aiq;
 			A[i,q] = s*Aip + c*Aiq;
 		}
-		// this only becomes O(n) complex
+		// this bit then only becomes O(n) complex
 	}
 
 
@@ -81,13 +81,16 @@ public  class Jacobi{
 			this.sweep();
 			this.num_sweeps++;
 		} // while until break
-		Console.WriteLine($"Sweeps {this.num_sweeps} Rots {this.num_rotations}");
+		if (this.verbose > 0) Console.WriteLine($"Sweeps: {this.num_sweeps}. Rotations: {this.num_rotations}");
 
 	} // cycle
 
 	public void sweep() {
-
-		for(int p=0;p<n-1;p++) for(int q=p+1;q<n;q++) this.make_zero(p,q);
+		// in the unoptimized version sweep all off diagonal elements
+		for(int p=0;p<n;p++) {
+			for(int q=0;q<p;q++) this.make_zero(p,q);
+			for(int q=p+1;q<n;q++) this.make_zero(p,q);
+		}
 
 	}
 

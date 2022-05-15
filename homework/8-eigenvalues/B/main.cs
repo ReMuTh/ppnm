@@ -5,6 +5,7 @@ class main{
 static void Main(){
 
 	WL("Homework Eigenvalues\nPART B. Hydrogen s wave");
+	WL("Using optimized routine from part C for this. No reason not to.");
 
 	// building vector of analytical levels
 	vector E_ana = new vector(5);
@@ -57,7 +58,7 @@ static (vector,vector,matrix) solve_hydrogen(double r_max=20,double dr=0.2,int v
 
 	int npoints = (int)(r_max/dr)-1;
 
-	if(verbose >= 1) WL($"\nBuilding Hamiltonian matrix with r_max = {r_max}, dr = {dr}, n = {npoints}");
+	if(verbose >= 1) WL($"\nBuilding Hamiltonian matrix with r_max = {r_max}, dr = {dr}, N = {npoints}");
 
 
 	vector r = new vector(npoints);
@@ -76,6 +77,8 @@ static (vector,vector,matrix) solve_hydrogen(double r_max=20,double dr=0.2,int v
 	else if(verbose >= 2) H.submatrix(0,10,0,10).print("Top-left 10x10 of H:");
 
 	var Hyd = new Jacobi(H);
+	// Share the verbose level with the Jacobi instance 
+	Hyd.verbose = verbose;
 	(matrix D,matrix V) = Hyd.diagonalize();
 
 	vector E = D.diag;

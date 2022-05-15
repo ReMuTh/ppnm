@@ -49,9 +49,9 @@ public class interpol {
 			if(zset) {
 				double yp,dp,sp;
 				(yp,dp,sp) = qspline.eval(z);
-				System.Console.WriteLine($"Interpolated value: y({z}) = {yp}");
-				System.Console.WriteLine($"Derivative at x={z}: {dp}");
-				System.Console.WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
+				WriteLine($"Interpolated value: y({z}) = {yp}");
+				WriteLine($"Derivative at x={z}: {dp}");
+				WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
 			}
 		}
 		

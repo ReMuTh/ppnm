@@ -1,0 +1,720 @@
+
+
+*******************************************************************************
+Sat May 14 02:49:38 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 3.9836825480e+14   0.00e+00  3.16e+06    1.000000e+00
+   4 2.2514067962e+04  -4.11e-07  3.16e+02    1.830269e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 22514.1
+rel. change during last iteration : -4.10867e-12
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 24.0267
+variance of residuals (reduced chisquare) = WSSR/ndf   : 577.284
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000183027      +/- 1.204e-06    (0.6576%)
+
+
+*******************************************************************************
+Sat May 14 02:51:12 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 3.9836825480e+14   0.00e+00  3.16e+06    1.000000e+00
+   4 2.2514067962e+04  -4.11e-07  3.16e+02    1.830269e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 22514.1
+rel. change during last iteration : -4.10867e-12
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 24.0267
+variance of residuals (reduced chisquare) = WSSR/ndf   : 577.284
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000183027      +/- 1.204e-06    (0.6576%)
+
+
+*******************************************************************************
+Sat May 14 02:52:30 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 40
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 3.9836825480e+14   0.00e+00  3.16e+06    1.000000e+00
+   4 2.2514067962e+04  -4.11e-07  3.16e+02    1.830269e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 22514.1
+rel. change during last iteration : -4.10867e-12
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 24.0267
+variance of residuals (reduced chisquare) = WSSR/ndf   : 577.284
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000183027      +/- 1.204e-06    (0.6576%)
+
+
+*******************************************************************************
+Sat May 14 02:55:04 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 50
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 1.8676583741e+15   0.00e+00  6.11e+06    1.000000e+00
+   4 3.8416154383e+05  -2.98e-08  6.11e+02    1.912613e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 384162
+rel. change during last iteration : -2.9834e-13
+
+degrees of freedom    (FIT_NDF)                        : 49
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 88.544
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7840.03
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000191261      +/- 2.048e-06    (1.071%)
+
+
+*******************************************************************************
+Sat May 14 02:55:57 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 50
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 1.8676583741e+15   0.00e+00  6.11e+06    1.000000e+00
+   4 3.8416154383e+05  -2.98e-08  6.11e+02    1.912613e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 384162
+rel. change during last iteration : -2.9834e-13
+
+degrees of freedom    (FIT_NDF)                        : 49
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 88.544
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7840.03
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000191261      +/- 2.048e-06    (1.071%)
+
+
+*******************************************************************************
+Sat May 14 02:58:18 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 02:58:50 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 02:59:38 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:00:53 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:02:06 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:02:06 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat May 14 03:02:23 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:02:23 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat May 14 03:03:00 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:03:00 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:03:22 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:03:22 2022
+
+
+FIT:    data read from "jacobi_timing_opti.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0021779669e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 8.0198972399e+04  -1.29e-07  4.47e+02    1.001617e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 80199
+rel. change during last iteration : -1.2939e-12
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.6931
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1822.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000100162      +/- 1.423e-06    (1.42%)
+
+
+*******************************************************************************
+Sat May 14 03:14:40 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:14:40 2022
+
+
+FIT:    data read from "jacobi_timing_opti.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0021779669e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 8.0198972399e+04  -1.29e-07  4.47e+02    1.001617e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 80199
+rel. change during last iteration : -1.2939e-12
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.6931
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1822.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000100162      +/- 1.423e-06    (1.42%)
+
+
+*******************************************************************************
+Sat May 14 03:15:11 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:15:11 2022
+
+
+FIT:    data read from "jacobi_timing_opti.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0021779669e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 8.0198972399e+04  -1.29e-07  4.47e+02    1.001617e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 80199
+rel. change during last iteration : -1.2939e-12
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.6931
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1822.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000100162      +/- 1.423e-06    (1.42%)
+
+
+*******************************************************************************
+Sat May 14 03:15:29 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:15:29 2022
+
+
+FIT:    data read from "jacobi_timing_opti.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0021779669e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 8.0198972399e+04  -1.29e-07  4.47e+02    1.001617e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 80199
+rel. change during last iteration : -1.2939e-12
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.6931
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1822.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000100162      +/- 1.423e-06    (1.42%)
+
+
+*******************************************************************************
+Sat May 14 03:16:45 2022
+
+
+FIT:    data read from "jacobi_timing.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 9.0006134915e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 1.6802152501e+05  -6.17e-08  4.47e+02    1.870511e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 168022
+rel. change during last iteration : -6.17338e-13
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 61.7954
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3818.67
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.000187051      +/- 2.059e-06    (1.101%)
+
+
+*******************************************************************************
+Sat May 14 03:16:45 2022
+
+
+FIT:    data read from "jacobi_timing_opti.txt" using 1:2
+        format = x:z
+        #datapoints = 45
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+	f2(x) = b*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 9.0021779669e+14   0.00e+00  4.47e+06    1.000000e+00
+   4 8.0198972399e+04  -1.29e-07  4.47e+02    1.001617e-04
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 80199
+rel. change during last iteration : -1.2939e-12
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.6931
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1822.7
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 0.000100162      +/- 1.423e-06    (1.42%)
