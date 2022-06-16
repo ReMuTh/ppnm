@@ -1,13 +1,6 @@
 all: out.txt
 	cat out.txt
 
-#three_body_2.svg: three_body_data_2.txt three_body_plot_2.gpi	
-#	gnuplot three_body_plot_2.gpi
-
-#three_body_1.svg: three_body_data_1.txt three_body_plot_1.gpi	
-#	gnuplot three_body_plot_1.gpi
-
-
 out.txt: main.exe
 	mono $< > $@
 

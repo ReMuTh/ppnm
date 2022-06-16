@@ -1,0 +1,4 @@
+Akima spline interpolation of data from data/input_data_sin.txt
+Interpolated value: y(1.13) = 0.925382594498136
+Derivative at x=1.13: 0.444140158531275
+Integration from x=-3.14159265358979 to x=1.13: -1.43893910345102

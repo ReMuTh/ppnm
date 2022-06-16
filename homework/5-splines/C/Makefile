@@ -1,17 +1,17 @@
 all: out.txt cubic_spline_sin.svg cubic_spline_random.svg cubic_spline_artefact.svg
 	cat out.txt
 
-cubic_spline_artefact.svg : input_data_artefact.txt interpolated_data_artefact.txt qubicspline_plot_artefact.gpi Makefile
-	gnuplot qubicspline_plot_artefact.gpi
+cubic_spline_artefact.svg : input_data_artefact.txt interpolated_data_artefact.txt cubicspline_plot_artefact.gpi Makefile
+	gnuplot cubicspline_plot_artefact.gpi
 
-cubic_spline_random.svg : input_data_random.txt interpolated_data_random.txt qubicspline_plot_random.gpi Makefile
-	gnuplot qubicspline_plot_random.gpi
+cubic_spline_random.svg : input_data_random.txt interpolated_data_random.txt cubicspline_plot_random.gpi Makefile
+	gnuplot cubicspline_plot_random.gpi
 
-cubic_spline_sin.svg : input_data_sin.txt interpolated_data_sin.txt qubicspline_plot_sin.gpi Makefile
-	gnuplot qubicspline_plot_sin.gpi
+cubic_spline_sin.svg : input_data_sin.txt interpolated_data_sin.txt cubicspline_plot_sin.gpi Makefile
+	gnuplot cubicspline_plot_sin.gpi
 
 
-interpolated_data_artefact.txt: main.exe input_data_sin.txt Makefile
+interpolated_data_artefact.txt: main.exe input_data_artefact.txt Makefile
 	mono main.exe -input:input_data_artefact.txt -output:interpolated_data_artefact.txt -n:200
 
 interpolated_data_random.txt: main.exe input_data_random.txt Makefile

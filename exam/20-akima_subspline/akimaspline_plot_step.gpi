@@ -1,0 +1,11 @@
+set terminal pdf size 6,4.2
+set output 'fig/akima_spline_step.pdf' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key top left 
+set title '{/:Bold Akima subspline test 2: Step function artefact}'
+plot [-pi:pi] \
+		'data/input_data_step.txt' using 1:2 with points title 'Input points' pt 1 lt rgb "red", \
+		'data/interpol_akima_step.txt' using 1:2 with lines title 'Akima spline interpolation' lt rgb "green" lw 1, \
+		'data/interpol_cubic_step.txt' using 1:2 with lines title 'Cubic spline interpolation' lt rgb "blue" lw 0.5, \
+

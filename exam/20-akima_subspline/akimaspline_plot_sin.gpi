@@ -1,0 +1,14 @@
+set terminal pdf size 6,4.2
+set output 'fig/akima_spline_sin.pdf' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key top left 
+set title '{/:Bold Akima subspline test 1: Sinus}'
+set arrow from -pi,-2 to pi,-2 nohead dashtype 2 lc rgb "green" 
+plot [-pi:pi] [-2.1:1.6] \
+		'data/input_data_sin.txt' using 1:2 with points title 'Input points from sin(x)' pt 1 lt rgb "red", \
+		'data/interpol_akima_sin.txt' using 1:2 with lines title 'Interpolation' lt rgb "orange" lw 2, \
+		'data/interpol_akima_sin.txt' using 1:3 with lines title 'Derivative' lt rgb "blue" lw 1, \
+		cos(x) title 'cos(x)' dashtype 2 lt rgb "blue", \
+		'data/interpol_akima_sin.txt' using 1:4 with lines title 'Integration' lt rgb "green" lw 1, \
+		sin(x) title 'sin(x)' dt 2 lw 1 lt rgb "red"

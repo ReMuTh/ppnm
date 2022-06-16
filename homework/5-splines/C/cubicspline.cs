@@ -22,7 +22,7 @@ public class cubicspline {
 		// s will hold array of coarse integration segments
 		s = new double[n];
 		
-		// local arrs to hold x intervals, (named h in the note)
+		// local arrs to hold x intervals (h)
 		// and matrix elements in eq. 22.
 		double[] h = new double[n-1];
 		double[] p = new double[n-1];
@@ -49,7 +49,6 @@ public class cubicspline {
 		}
 
 		// Gauss elimination
-
 		for(int i = 1; i < n; i ++) {
 			D[i] -= Q[i-1]/D[i-1];
 			B[i] -= B[i-1]/D[i-1];
@@ -63,7 +62,7 @@ public class cubicspline {
 		}
 
 		// Now traverse to fill in c and d coeffs using eq 20
-		// In the same run fill coarse integration values
+		// In the same run fill coarse integration values held in array s
 		s[0] = 0.0;
 
 		for(int i = 0; i < n-1; i ++) {
