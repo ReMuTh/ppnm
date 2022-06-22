@@ -46,5 +46,8 @@ when a new integration point is requested.
 If z values all over the place are needed this adds two comparisons extra per point.
 However, when a large range of monotonic increasing or desceasing z values is requested
 like when writing n consequtive z-values to the output file it saves greatly on computation.
+<<<<<<< HEAD
 
 Se also the enclosed report akima_report.pdf
+=======
+>>>>>>> 80bc0e6d5b74cf262031e79dcc0d4551dfae124e
