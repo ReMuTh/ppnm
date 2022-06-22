@@ -1,0 +1,47 @@
+homework 13-minimization part A:
+Implimented Quasi-Newton minimization method with SR1 update
+
+Test 1. Find a minimum of the Rosenbrock's valley function:
+Start point:
+         4          5 
+Iteration steps: 634
+Result is:
+         1      0.999 
+Reference is:
+         1          1 
+PASSED
+(Using a pretty crude approx with acc=eps=1e-3)
+
+Test 1. Find local minimum of the Himmelblau's function:
+Start point:
+         4          5 
+Iteration steps: 15
+Result is:
+      3.58      -1.85 
+Reference is:
+      3.58      -1.85 
+PASSED
+Start point:
+         4          2 
+Iteration steps: 14
+Result is:
+         3          2 
+Reference is:
+         3          2 
+PASSED
+Start point:
+        -3          4 
+Iteration steps: 404
+Result is:
+     -2.81       3.13 
+Reference is:
+     -2.81       3.13 
+PASSED
+Start point:
+        -3         -4 
+Iteration steps: 49
+Result is:
+     -3.78      -3.28 
+Reference is:
+     -3.78      -3.28 
+PASSED

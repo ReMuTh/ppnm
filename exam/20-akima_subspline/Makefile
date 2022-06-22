@@ -1,17 +1,18 @@
-all: out.txt fig/akima_spline_sin.pdf fig/cubic_spline_sin.pdf fig/akima_spline_step.pdf fig/akima_spline_endpoints.pdf akima_report.pdf fig/python_comparison.pdf Makefile #
+all: out.txt fig/akima_spline_sin.pdf fig/cubic_spline_sin.pdf fig/akima_spline_step.pdf fig/akima_spline_endpoints.pdf Makefile akima_report.pdf fig/python_comparison.pdf
 	cat out.txt
-	echo "See readme.md and akima_report.pdf"
+	# See readme.md and akima_report.pdf
 
-# Comparing akima spline to cubic spline
-
-
-
-
+# Render report from .tex.
 akima_report.pdf:akima_report.tex fig/cubic_spline_sin.pdf fig/akima_spline_sin.pdf fig/akima_spline_step.pdf fig/akima_spline_endpoints.pdf fig/python_comparison.pdf
 	pdflatex akima_report.tex
+	pdflatex akima_report.tex
+# pdflatex had to be run twice to get cross referencing right, though no mistakes in \ref and \label tags. Found no way around this…
 
+# Running python to create comparison with Scipy library.
 fig/python_comparison.pdf:scipy_comparison.py
 	python3 scipy_comparison.py
+
+# ComTesting akima spline and comparing to cubic spline
 
 # Test 1 (sinus): input data following a sine curve with irregular x values
 # and also outputting one akima interpolation value to out.txt
@@ -64,11 +65,11 @@ cubicspline.exe: main_cubic.cs cubiclib.dll
 akimaspline.exe: main_akima.cs akimalib.dll
 	mcs -target:exe -out:akimaspline.exe -reference:akimalib.dll  main_akima.cs
 
-cubiclib.dll:cubicspline.cs
-	mcs -target:library -out:cubiclib.dll cubicspline.cs
+cubiclib.dll:cubiclib.cs
+	mcs -target:library -out:cubiclib.dll cubiclib.cs
 
-akimalib.dll:akimaspline.cs
-	mcs -target:library -out:akimalib.dll akimaspline.cs
+akimalib.dll:akimalib.cs
+	mcs -target:library -out:akimalib.dll akimalib.cs
 
 clean:
-	rm *.exe *.dll fig/*.pdf data/interpol*.txt *.log *.pdf
+	rm *.exe *.dll fig/*.pdf data/interpol*.txt *.log *.pdf *.aux

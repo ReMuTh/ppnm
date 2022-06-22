@@ -1,0 +1,9 @@
+set terminal pdf size 6,4.2
+set output 'higgs_data_fit.pdf' 
+set xlabel 'Energy [GeV]' 
+set ylabel 'Cross-sections [arb]' 
+set key top left 
+set title '{/:Bold 2012 CERN Higgs data}'
+plot [98:162] [-5:10] \
+		'higgs_data.txt' using 1:2:3 with yerrorbars title 'Experiment data' pt 1 lt rgb "red",\
+		'fit_data.txt' using 1:2 with lines title 'Fit to Breit-Wigner' lt rgb "orange" lw 2 

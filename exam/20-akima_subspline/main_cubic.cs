@@ -13,14 +13,12 @@ public class interpol {
 	static int n;
 	static bool verbose = false;
 	static cubicspline qspline;
-	
 	public static int Main(string[] args) {
-	    
+
 		foreach(var arg in args){
 			// parsing input parameters as in io-homework 
 			var w=arg.Split(':');
 			// -input sets the input file to read data from that needs interpolating
-			// 
 			if(w[0]=="-input")infile=w[1];
 			// -output sets the output file to put interpolated datapoints
 			else if(w[0]=="-output")outfile=w[1];
@@ -31,6 +29,7 @@ public class interpol {
 			else if(w[0]=="-z"){z=double.Parse(w[1]);zset = true;}
 			// -Verbose output more explicit
 			else if(w[0]=="-verbose"){verbose = true;}
+
 			else { Error.WriteLine("wrong argument"); return 1;}
 		}
 		
@@ -38,26 +37,53 @@ public class interpol {
 
 		if(!String.IsNullOrEmpty(infile)) {
 			
-			read_datafile();
+			try {
+				read_datafile();
+			}
+			catch(Exception ex) {
+				Error.WriteLine(ex.Message);
+				return 1;
+			}
 			
-			qspline = new cubicspline(x,y);
+			// If null is passed, the akimaspline constructor will default to "akima" endpoints 
+
+			try {
+				qspline = new cubicspline(x,y);
+			}
+			catch(ArgumentException ex) {
+				Error.WriteLine(ex.Message);
+				return 1;	
+			}
 			
 			// If outfile is set fill it with equidistant interpolation values 
-			if(!String.IsNullOrEmpty(outfile)) write_outputfile();
-			
+			if(!String.IsNullOrEmpty(outfile)) {
+				try{
+					write_outputfile();
+				}
+				catch(Exception ex) {
+					Error.WriteLine(ex.Message);
+				}
+			}
+
 			// if a single z has been requested return interpolation value
 			if(zset) {
 				double yp,dp,sp;
-				(yp,dp,sp) = qspline.eval(z);
-				System.Console.WriteLine($"Cubic spline interpolation of data from {infile}");
-				System.Console.WriteLine($"Interpolated value: y({z}) = {yp}");
-				System.Console.WriteLine($"Derivative at x={z}: {dp}");
-				System.Console.WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
+				try{
+					(yp,dp,sp) = qspline.eval(z);
+
+					System.Console.WriteLine($"Akima spline interpolation of data from {infile}");
+					System.Console.WriteLine($"Interpolated value: y({z}) = {yp}");
+					System.Console.WriteLine($"Derivative at x={z}: {dp}");
+					System.Console.WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
+				}
+				catch(ArgumentException ex) {
+					Error.WriteLine(ex.Message);	
+				}
 			}
 		}
 		
 		else {
-			Error.WriteLine("-input [name of datafile] needs to be set. "); return 1;
+			Error.WriteLine("-input [name of datafile] needs to be set."); return 1;
 		}
 	
 		return 0;	

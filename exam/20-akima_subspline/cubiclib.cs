@@ -9,6 +9,7 @@ public class cubicspline {
 	
 	public cubicspline(double[] xs,double[] ys){
 		n = xs.Length;
+		if (n<2) throw new ArgumentException("Input data should contain at least two points.");
 
 		// Transfer to local x,y
 		x = xs;
@@ -33,6 +34,7 @@ public class cubicspline {
 		// Calculate interval lengths h and linear coefficients
 		for(int i = 0; i < n-1; i ++) {		
 			h[i] = x[i+1] - x[i];
+			if (h[i]<0) throw new ArgumentException("Input x values must be in ascending order");
 			p[i] = (y[i+1] - y[i])/h[i];
 		}
 

@@ -9,7 +9,8 @@ public class akimaspline {
 	
 	public akimaspline(double[] xs,double[] ys, string endslopes = "akima"){
 		n = xs.Length;
-
+		if (n<4) throw new ArgumentException("Input data should contain at least two points.");
+		
 		// Transfer to local x,y
 		x = xs;
 		y = ys;
@@ -32,6 +33,7 @@ public class akimaspline {
 		// Calculate interval lengths h and linear slopes p
 		for(int i = 0; i < n-1; i ++) {		
 			h[i] = x[i+1] - x[i];
+			if (h[i]<0) throw new ArgumentException("Input x values must be in ascending order");
 			p[i] = (y[i+1] - y[i])/h[i];
 		}
 		// Calculate weights. Notice that the indexing will be shifted
@@ -148,6 +150,8 @@ public class akimaspline {
 			s[i+1]=s[i] + y[i] * h[i] + (b[i] * h[i]*h[i])/2 + (c[i] * Pow(h[i],3))/3 + (d[i] * Pow(h[i],4))/4;
 		}
 
+
+
 	} // Constructor
 	
 	// Return value, derivative and integral as literal tuple.
@@ -173,7 +177,7 @@ public class akimaspline {
 		// Checks if z is inside lastbin
 		if(x[lastbin] <= z && z <= x[lastbin+1]) return lastbin;
 		
-		if(!(x[0]<=z && z<=x[n-1])) throw new Exception($"binsearch: z={z} out of x range {x[0]} {x[n-1]}");
+		if(!(x[0]<=z && z<=x[n-1])) throw new ArgumentException($"binsearch: z={z} out of x range [{x[0]}, {x[n-1]}]");
 		int i=0, j=n-1;
 		while(j-i>1){
 			int mid=(i+j)/2;

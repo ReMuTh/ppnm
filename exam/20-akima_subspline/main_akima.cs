@@ -41,27 +41,53 @@ public class interpol {
 
 		if(!String.IsNullOrEmpty(infile)) {
 			
-			read_datafile();
+			try {
+				read_datafile();
+			}
+			catch(Exception ex) {
+				Error.WriteLine(ex.Message);
+				return 1;
+			}
 			
 			// If null is passed, the akimaspline constructor will default to "akima" endpoints 
-			aspline = new akimaspline(x,y,endpoints);
+
+			try {
+				aspline = new akimaspline(x,y,endpoints);
+			}
+			catch(ArgumentException ex) {
+				Error.WriteLine(ex.Message);
+				return 1;	
+			}
 			
 			// If outfile is set fill it with equidistant interpolation values 
-			if(!String.IsNullOrEmpty(outfile)) write_outputfile();
-			
+			if(!String.IsNullOrEmpty(outfile)) {
+				try{
+					write_outputfile();
+				}
+				catch(Exception ex) {
+					Error.WriteLine(ex.Message);
+				}
+			}
+
 			// if a single z has been requested return interpolation value
 			if(zset) {
 				double yp,dp,sp;
-				(yp,dp,sp) = aspline.eval(z);
-				System.Console.WriteLine($"Akima spline interpolation of data from {infile}");
-				System.Console.WriteLine($"Interpolated value: y({z}) = {yp}");
-				System.Console.WriteLine($"Derivative at x={z}: {dp}");
-				System.Console.WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
+				try{
+					(yp,dp,sp) = aspline.eval(z);
+
+					System.Console.WriteLine($"Akima spline interpolation of data from {infile}");
+					System.Console.WriteLine($"Interpolated value: y({z}) = {yp}");
+					System.Console.WriteLine($"Derivative at x={z}: {dp}");
+					System.Console.WriteLine($"Integration from x={x[0]} to x={z}: {sp}");
+				}
+				catch(ArgumentException ex) {
+					Error.WriteLine(ex.Message);	
+				}
 			}
 		}
 		
 		else {
-			Error.WriteLine("-input [name of datafile] needs to be set. "); return 1;
+			Error.WriteLine("-input [name of datafile] needs to be set."); return 1;
 		}
 	
 		return 0;	

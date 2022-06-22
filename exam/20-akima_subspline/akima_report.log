@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.23)  16 JUN 2022 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.23)  22 JUN 2022 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,23 +376,23 @@ Package pdftex.def Info: fig/akima_spline_sin.pdf  used on input line 102.
 <fig/cubic_spline_sin.pdf, id=17, 433.62pt x 303.1325pt>
 File: fig/cubic_spline_sin.pdf Graphic file (type pdf)
 <use fig/cubic_spline_sin.pdf>
-Package pdftex.def Info: fig/cubic_spline_sin.pdf  used on input line 110.
+Package pdftex.def Info: fig/cubic_spline_sin.pdf  used on input line 109.
 (pdftex.def)             Requested size: 384.10959pt x 268.53358pt.
 <fig/akima_spline_step.pdf, id=18, 433.62pt x 303.1325pt>
 File: fig/akima_spline_step.pdf Graphic file (type pdf)
 <use fig/akima_spline_step.pdf>
-Package pdftex.def Info: fig/akima_spline_step.pdf  used on input line 117.
+Package pdftex.def Info: fig/akima_spline_step.pdf  used on input line 116.
 (pdftex.def)             Requested size: 384.10959pt x 268.53358pt.
 <fig/akima_spline_endpoints.pdf, id=19, 433.62pt x 303.1325pt>
 File: fig/akima_spline_endpoints.pdf Graphic file (type pdf)
 <use fig/akima_spline_endpoints.pdf>
-Package pdftex.def Info: fig/akima_spline_endpoints.pdf  used on input line 124
+Package pdftex.def Info: fig/akima_spline_endpoints.pdf  used on input line 123
 .
 (pdftex.def)             Requested size: 384.10959pt x 268.53358pt.
 <fig/scipy_comparison.pdf, id=20, 722.7pt x 433.62pt>
 File: fig/scipy_comparison.pdf Graphic file (type pdf)
 <use fig/scipy_comparison.pdf>
-Package pdftex.def Info: fig/scipy_comparison.pdf  used on input line 131.
+Package pdftex.def Info: fig/scipy_comparison.pdf  used on input line 130.
 (pdftex.def)             Requested size: 384.10959pt x 230.46591pt.
 
 [2] [3 <./fig/akima_spline_sin.pdf> <./fig/cubic_spline_sin.pdf
@@ -427,7 +427,7 @@ onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts
 /type1/public/cm-super/sfrm1000.pfb>
-Output written on akima_report.pdf (5 pages, 264269 bytes).
+Output written on akima_report.pdf (5 pages, 264365 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams

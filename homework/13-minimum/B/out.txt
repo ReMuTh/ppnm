@@ -1,0 +1,12 @@
+homework 13-minimization part B:
+Fitting Breit-Wigner resonance to CERS Higgs boson data
+Iteration start point:
+       128          5          1 
+Iteration steps: 57281
+Mass [Gev/c^2]:    125.97
+Width [Gev/c^2]:     2.09
+Scaling [arb]:       9.88
+Observation: The iteration terminates in the ballbark of the CERN Higgs mass, but if a precision better than 1e-4 is requested the process doesn't conclude in reasonable time.
+Writing out list of Berit-Wigner-function values for a plot to visually inspect the quality of the fit.
+
+Conclusion: Inspecting at the plot (higgs_data_fit.pdf) the fit looks acceptable.
