@@ -1,0 +1,59 @@
+homework 14-neuaralnetwork part A:
+FIRSTLY
+Testing new nifty vector operations made to make neural class more compact
+Filling vector with with 12 elements with identical elements:
+         5          5          5          5          5          5          5          5          5          5          5          5 
+Filling vector with with evenly distributed elements:
+         1          2          3          4          5          6          7          8          9         10         11         12 
+Vector containing first four elements:
+         1          2          3          4 
+Vector containing next four elements:
+         5          6          7          8 
+Vector containing last four elements:
+         9         10         11         12 
+Assigning new values to a slice (using) another slice
+         7          8          9         10          5          6          7          8          9         10         11         12 
+Testing element-wise multiplication (hadamard multiplication)
+Vector 1
+         7          8          9         10          5          6          7          8          9         10         11         12 
+Vector 2
+         0          0          0          0          0          0          0          0          0          0          0          0 
+Result
+         0          0          0          0          0          0          0          0          0          0          0          0 
+Sum of hadamard: 0 Should be the same as dot product: 0
+All seems to work as expected
+Vector with random integers between 0 and 100
+        68          8          9         10          5          6          7          8          9         10         11         12 
+Vector with random doubles between -1 and 1
+    -0.697     0.0756     0.0236      0.549      0.077      0.229     -0.918      -0.13      0.552     -0.725    -0.0753     -0.633 
+
+
+SECONDLY
+Compute 11 function values of the subject function Cos(5*x-1)*Exp(-x*x)
+x values for training:
+        -1       -0.8       -0.6       -0.4       -0.2          0        0.2        0.4        0.6        0.8          1 
+y values for training:
+     0.353       0.15     -0.456     -0.844       -0.4       0.54      0.961       0.46      -0.29     -0.522      -0.24 
+
+THIRDLY
+Initialize neural network with 20 neurons and gaussian_wavelet as activiation.
+Now train network with input values, using minimization from homework 13
+Iteration steps: 698
+response(x= 0.1): 0.87089971238587
+subject1(x= 0.1): 0.868850469500733
+Ok that worked like a charm.
+
+FOURTHLY
+investigating how the number of neurons matter by ploting interpolations.
+Writing output files for plotting…
+Training using 5 neurons.
+Iteration steps: 783812
+Training using 10 neurons.
+Iteration steps: 455
+Training using 15 neurons.
+Iteration steps: 448
+Training using 20 neurons.
+Iteration steps: 1282
+Training using 25 neurons.
+Iteration steps: 867
+As expected, if the number of neurons the network becomes 'overdetermined' and can sometimes predict strange paths between the input points.
