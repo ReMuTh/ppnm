@@ -1,0 +1,14 @@
+set terminal pdf size 6,4.2
+set output 'neuron_interpolation_calc.pdf' 
+set xlabel 'x' 
+set ylabel 'y' 
+set key top left 
+set title '{/:Bold Function Interpolation and calculus using neural network}'
+plot [-1.05:1.05] [-4.5:5] \
+	'data/training_points.txt' using 1:2 with points title 'Training points' pt 1 lt rgb "red",\
+	'data/subject_function.txt' using 1:2 with lines title 'Subject function' lt rgb "red" lw 1,\
+	'data/interpol_data.txt' using 1:2 with lines title 'neural interpolation' dashtype 2 lt rgb "blue" lw 1,\
+	'data/subject_function_der.txt' using 1:2 with lines title 'Subject analytical derivative' lt rgb "orange" lw 1,\
+	'data/interpol_data_der.txt' using 1:2 with lines title 'neural derivative' dashtype 2 lt rgb "green" lw 1,\
+	'subject_function_int.txt' using 1:2 with lines title 'Subject analytical anti-derivative' lt rgb "brown" lw 1,\
+	'data/interpol_data_int.txt' using 1:2 with lines title 'nearal anti-derivative' dashtype 2 lt rgb "purple" lw 1

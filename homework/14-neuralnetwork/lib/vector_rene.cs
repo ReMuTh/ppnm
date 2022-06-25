@@ -52,8 +52,9 @@ public partial class vector{
 			for(int k=0;k<(j-i);k++) this[k+i]=value[k];
 		}
 	}
+	
 	// element wise product, also known as hadamard product
-	public vector hadamard(vector v) {
+	public vector mult(vector v) {
 		vector r=new vector(size);
 		for(int i=0; i<size; i++) r[i]=this[i]*v[i];
 		return r;

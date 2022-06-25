@@ -29,9 +29,9 @@ static void Main() {
 	WL("Testing element-wise multiplication (hadamard multiplication)");
 	vec1.print("Vector 1");
 	vec2.print("Vector 2");
-	vec1.hadamard(vec2).print("Result");
+	vec1.mult(vec2).print("Result");
 
-	WL($"Sum of hadamard: {vec1.hadamard(vec2).sum()} Should be the same as dot product: {vec1*vec2}");
+	WL($"Sum of hadamard: {vec1.mult(vec2).sum()} Should be the same as dot product: {vec1*vec2}");
 	WL("All seems to work as expected");
 
 

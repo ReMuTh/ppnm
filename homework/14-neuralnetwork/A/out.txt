@@ -23,9 +23,9 @@ Result
 Sum of hadamard: 0 Should be the same as dot product: 0
 All seems to work as expected
 Vector with random integers between 0 and 100
-        68          8          9         10          5          6          7          8          9         10         11         12 
+        78          8          9         10          5          6          7          8          9         10         11         12 
 Vector with random doubles between -1 and 1
-    -0.697     0.0756     0.0236      0.549      0.077      0.229     -0.918      -0.13      0.552     -0.725    -0.0753     -0.633 
+    -0.718     -0.563     0.0779      -0.25      -0.42      0.443     -0.989     -0.433       0.81      0.866     -0.126     -0.334 
 
 
 SECONDLY
@@ -38,8 +38,8 @@ y values for training:
 THIRDLY
 Initialize neural network with 20 neurons and gaussian_wavelet as activiation.
 Now train network with input values, using minimization from homework 13
-Iteration steps: 698
-response(x= 0.1): 0.87089971238587
+Iteration steps: 74
+response(x= 0.1): 0.879047637202576
 subject1(x= 0.1): 0.868850469500733
 Ok that worked like a charm.
 
@@ -47,13 +47,13 @@ FOURTHLY
 investigating how the number of neurons matter by ploting interpolations.
 Writing output files for plotting…
 Training using 5 neurons.
-Iteration steps: 783812
+Iteration steps: 95964
 Training using 10 neurons.
-Iteration steps: 455
+Iteration steps: 26092
 Training using 15 neurons.
-Iteration steps: 448
+Iteration steps: 460
 Training using 20 neurons.
-Iteration steps: 1282
+Iteration steps: 249
 Training using 25 neurons.
-Iteration steps: 867
+Iteration steps: 8152
 As expected, if the number of neurons the network becomes 'overdetermined' and can sometimes predict strange paths between the input points.

@@ -18,8 +18,12 @@ public class neural{
 		// we need vector with x in all entries
 		vector xs = new vector(n).fill(x);
 
-		// Using my nuveau vector slicing to retrieve a = p[0,n];b = p[n,2*n];w = p[n*2,n*3];
-		return ((xs-this.p[0,n])/this.p[n,2*n]).map(this.f).hadamard(this.p[n*2,n*3]).sum();
+		// Using my nuveau vector slicing to retrieve a, b and w
+		vector a = this.p[0,n];
+		vector b = this.p[n,2*n];
+		vector w = this.p[n*2,n*3];
+
+		return ((xs-a)/b).map(this.f).mult(w).sum();
 	}
 
 	public void train(vector x,vector y){
@@ -30,6 +34,21 @@ public class neural{
 		this.p.random(-1,1);
 		this.p = Minimization.qnewton(this.cost,p,1e-4);
 	}
+
+	public void train2(vector x, vector y){
+		//Cost function: C(p) = ∑k=1..N (Fp(xk) - yk)²
+		Func<vector,double> cost_function  = C => {
+			p = C;
+			double s = 0;
+			for(int i=0; i<x.size; i++){
+				s += Pow(response(x[i])-y[i],2);
+			}
+			return s/x.size;
+		}; //Func
+		vector v = p;
+		vector result = Minimization.qnewton(cost_function, v, 1e-3);
+		p = result;
+	}//train
 
 	private double cost(vector p) {
 		this.p = p;

@@ -1,0 +1,17 @@
+homework 14-neuaralnetwork part B:
+Testing calculus on neural network
+
+
+Compute 13 function values of the subject function Cos(5*x-1)*Exp(-x*x)
+x values for training:
+        -1     -0.833     -0.667       -0.5     -0.333     -0.167          0      0.167      0.333        0.5      0.667      0.833          1 
+y values for training:
+     0.353      0.219     -0.237     -0.729     -0.796     -0.252       0.54      0.959      0.703     0.0551     -0.443     -0.499      -0.24 
+
+Initialize neural network with 7 neurons and gaussian_wavelet and (anti-)derivative as activiation.
+Now training network.
+Iteration steps: 7401
+Conclusion: The network replicates the analytical function, the derivatives and anti derivatives satifactory.
+See neuron_interpolation_calc.pdf for comparisons with analytical values
+The anti-derivative differs by a constant offset from the analytical but that's expected.
+NB: The analytical anti-derivative of Cos(5*x-1)*Exp(-x*x) is pretty toxic, and the table for plotting is as comparison was generated in WolframAlpha
